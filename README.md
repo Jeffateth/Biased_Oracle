@@ -1,5 +1,15 @@
 # The Biased Oracle: Assessing LLMs' Understandability and Empathy in Medical Diagnoses
-
+<p align="center">
+  <a href="https://arxiv.org/abs/2511.00924">
+    <img src="https://img.shields.io/badge/arXiv-2511.00924-b31b1b.svg?style=for-the-badge" alt="arXiv">
+  </a>
+  <a href="https://openreview.net/forum?id=mhtDi2d4ZC">
+    <img src="https://img.shields.io/badge/OpenReview-Forum-blue?style=for-the-badge" alt="OpenReview">
+  </a>
+  <a href="https://genai4health.github.io/">
+    <img src="https://img.shields.io/badge/Workshop-GenAI4Health@NeurIPS%202025-6aa84f?style=for-the-badge" alt="GenAI4Health Workshop">
+  </a>
+</p>
 <!-- =======================================================
      LOGO BLOCK — ETH Zurich | Health Ethics & Policy Lab | NeurIPS
      ======================================================= -->
@@ -65,13 +75,14 @@ Biased_Oracle/
 
 ## Citation
 ```bibtex
-@inproceedings{
-  yao2025the,
-  title={The Biased Oracle: Assessing {LLM}s{\textquoteright} Understandability and Empathy in Medical Diagnoses},
-  author={Jianzhou Yao and Shunchang Liu and Guillaume Drui and Rikard Pettersson and Alessandro Blasimme and Sara Kijewski},
-  booktitle={The Second Workshop on GenAI for Health: Potential, Trust, and Policy Compliance},
-  year={2025},
-  url={https://openreview.net/forum?id=mhtDi2d4ZC}
+@misc{yao2025biasedoracleassessingllms,
+      title={The Biased Oracle: Assessing LLMs' Understandability and Empathy in Medical Diagnoses}, 
+      author={Jianzhou Yao and Shunchang Liu and Guillaume Drui and Rikard Pettersson and Alessandro Blasimme and Sara Kijewski},
+      year={2025},
+      eprint={2511.00924},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2511.00924}, 
 }
 ```
 ## Notes
