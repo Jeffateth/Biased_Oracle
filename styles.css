@@ -130,6 +130,20 @@ body {
     height: 16px;
 }
 
+/* Make buttons pill-shaped */
+.btn.rounded {
+    border-radius: 9999px;      /* full pill */
+    padding: 12px 18px;         /* a touch more breathing room */
+}
+
+/* Keep icons crisp and white by inheriting the text color */
+.btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;         /* inherits from .btn color (white) */
+    flex-shrink: 0;             /* prevents icon from squishing */
+}
+
 /* Content Sections */
 .content-section {
     padding: 50px 20px;
