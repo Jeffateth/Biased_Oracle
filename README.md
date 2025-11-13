@@ -39,7 +39,7 @@ We evaluate GPT-4o and Claude-3.7 on 156 synthetic medical diagnostic scenarios 
 - **Empathy:** Affective and cognitive dimensions via LLM-as-a-judge and human ratings
 
 **Scenario Design**
-- 156 diagnostic scenarios combining 4 conditions × 3 education levels × 4 age groups × 2 genders × 3 geographical groups
+- 156 diagnostic scenarios combining 4 medical conditions, 3 education levels, 4 age groups, 2 genders, and 3 geographical groups
 
 **Highlights**
 - Texts exceed 6th–8th grade readability standards for health materials  
