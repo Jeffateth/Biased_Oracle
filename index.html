@@ -77,8 +77,8 @@
         <div class="container">
             <h2>Abstract</h2>
             <div class="section-content">
-                <p>We evaluate GPT-4o and Claude-3.7 on 156 synthetic medical diagnostic scenarios across diverse patient demographics, assessing understandability using 5 standard readability metrics (Flesch-Kincaid, SMOG, Gunning Fog, Coleman-Liau, Dale-Chall) and empathy through affective and cognitive dimensions via LLM-as-a-judge and human ratings.</p>
-                <p>Our study examines 156 diagnostic scenarios combining 4 medical conditions, 3 education levels, 4 age groups, 2 genders, and 3 geographical groups.</p>
+                <p>Large language models (LLMs) show promise for supporting clinicians in diagnostic communication by generating explanations and guidance for patients. Yet their ability to produce outputs that are both understandable and empathetic remains uncertain. We evaluate two leading LLMs on medical diagnostic scenarios, assessing understandability using readability metrics as a proxy and empathy through LLM-as-a-Judge ratings compared to human evaluations.</p>
+                <p>The results indicate that LLMs adapt explanations to socio-demographic variables and patient conditions. However, they also generate overly complex content and display biased affective empathy, leading to uneven accessibility and support. These patterns underscore the need for systematic calibration to ensure equitable patient communication.</p>
             </div>
         </div>
     </section>
@@ -88,20 +88,28 @@
             <div class="section-content">
                 <div class="findings-grid">
                     <div class="finding-item">
-                        <h4>📊 Diagnosis Dominates Empathy</h4>
-                        <p>Alzheimer's disease receives the highest empathy scores, while heart disease receives the lowest. The type of diagnosis significantly influences the empathetic tone of LLM-generated explanations, revealing systematic biases in how models respond to different medical conditions.</p>
+                        <h4>📚 Overcomplexity Problem</h4>
+                        <p>Both models generate text at 9th-13th grade reading level, well above the recommended 6th-8th grade for public health materials. This overcomplexity may reinforce health literacy disparities and limit accessibility for general patient populations.</p>
                     </div>
                     <div class="finding-item">
-                        <h4>🎓 Education Bias</h4>
-                        <p>Patients with medical degrees receive lower affective empathy in diagnostic explanations. This suggests that LLMs adjust their emotional tone based on perceived patient expertise, potentially underserving highly educated patients' emotional needs.</p>
+                        <h4>🧠 Cognitive vs. Affective Empathy Split</h4>
+                        <p>Cognitive empathy remains consistently high and stable (~2.8-3.0) across all demographic groups. In contrast, affective empathy shows substantial variation, shaped by medical diagnosis, patient education level, and critically, the choice of evaluator model.</p>
                     </div>
                     <div class="finding-item">
-                        <h4>👥 Age Effects are Rater-Dependent</h4>
-                        <p>A U-shaped relationship between patient age and empathy is visible with some evaluators but not others. This inconsistency highlights the subjective nature of empathy assessment and the importance of evaluator selection in LLM evaluation frameworks.</p>
+                        <h4>🏥 Diagnosis as Primary Driver</h4>
+                        <p>Medical condition has the strongest and most consistent effect on affective empathy. Alzheimer's disease receives the highest empathy scores (~2.2-3.0), while chronic heart disease receives the lowest (~1.6-2.3)—a difference of nearly one full scale point.</p>
                     </div>
                     <div class="finding-item">
-                        <h4>⚠️ LLM-as-Judge Disagreement</h4>
-                        <p>Poor inter-rater reliability between different LLM evaluators reveals fundamental challenges in using LLMs to assess subjective qualities like empathy. This finding calls into question the reliability of LLM-as-a-judge methodologies for evaluating nuanced human-centric attributes.</p>
+                        <h4>🎓 Education Inverse Relationship</h4>
+                        <p>Patients with medical degrees receive lower affective empathy than those with high school education. This suggests LLMs shift to a more formal, less emotionally expressive communication style when addressing technically trained individuals.</p>
+                    </div>
+                    <div class="finding-item">
+                        <h4>⚖️ Systematic Self-Evaluation Bias</h4>
+                        <p>GPT inflates its own affective empathy scores by +0.333 points, while Claude deflates its own scores by -0.256 points. These self-evaluation biases hold consistently across all demographic groups, revealing systematic patterns in model self-assessment.</p>
+                    </div>
+                    <div class="finding-item">
+                        <h4>👥 Overconfidence vs. Human Judges</h4>
+                        <p>GPT rates its own outputs significantly higher than human annotators do (all p < 0.05). Critically, LLMs fail to detect demographic biases that human evaluators identify, such as lower empathy toward African females. Model-human disagreement increases when human annotators themselves show higher variability.</p>
                     </div>
                 </div>
             </div>
@@ -109,25 +117,24 @@
     </section>
     <section class="content-section">
         <div class="container">
-            <h2>Overview</h2>
-            <div class="section-content">
-                <p>Large language models have shown remarkable capabilities in generating medical explanations, but their ability to maintain understandability and empathy across diverse patient demographics remains underexplored. This work presents a comprehensive evaluation of two state-of-the-art models, GPT-4o and Claude-3.7, across 156 carefully designed synthetic medical diagnostic scenarios.</p>
-                <h3>Scenario Design</h3>
-                <p>Our evaluation framework encompasses 156 diagnostic scenarios that systematically vary across multiple dimensions:</p>
-                <ul>
-                    <li><strong>4 Medical Conditions:</strong> Obesity, Pancreatic cancer, Alzheimer’s disease, Chronic ischemic heart disease</li>
-                    <li><strong>3 Education Levels:</strong> High school diploma or lower, University degree, Medical degree</li>
-                    <li><strong>4 Age Groups (analysis):</strong> &lt;18, 18–49, 50–64, 65+</li>
-                    <li><strong>2 Genders:</strong> Male and female</li>
-                    <li><strong>3 Geographic Groups:</strong> European, African, Asian</li>
-                </ul>
-                <h3>Evaluation Methodology</h3>
-                <p>We assess model outputs using two complementary approaches:</p>
-                <ul>
-                    <li><strong>Understandability:</strong> Measured using 5 standard readability metrics including Flesch-Kincaid Grade Level, SMOG Index, Gunning Fog Index, Coleman-Liau Index, and Dale-Chall Readability Score</li>
-                    <li><strong>Empathy:</strong> Evaluated through both affective (emotional warmth) and cognitive (perspective-taking) dimensions using LLM-as-a-judge approaches validated against human ratings</li>
-                </ul>
-            </div>
+            <h3>Scenario Design</h3>
+            <p>Our evaluation framework encompasses 156 diagnostic scenarios that systematically vary across multiple dimensions:</p>
+            <ul>
+                <li><strong>4 Medical Conditions:</strong> Obesity, Pancreatic cancer, Alzheimer's disease, Chronic ischemic heart disease</li>
+                <li><strong>3 Education Levels:</strong> High school diploma or lower, University degree, Medical degree</li>
+                <li><strong>4 Age Groups (analysis):</strong> &lt;18, 18–49, 50–64, 65+</li>
+                <li><strong>2 Genders:</strong> Male and female</li>
+                <li><strong>3 Geographic Groups:</strong> European, African, Asian</li>
+            </ul>
+            <h3>Evaluation Methodology</h3>
+            <p>We assess model outputs using two complementary approaches:</p>
+            <ul>
+                <li><strong>Understandability:</strong> Measured using 5 standard readability metrics including Flesch-Kincaid Grade Level, SMOG Index, Gunning Fog Index, Coleman-Liau Index, and Dale-Chall Readability Score</li>
+                <li><strong>Empathy:</strong> Evaluated through both affective (emotional warmth) and cognitive (perspective-taking) dimensions using LLM-as-a-judge approaches validated against human ratings</li>
+            </ul>
+            <h3>Broader Impacts</h3>
+            <p>Our study reveals that LLMs, if deployed in medical contexts without careful safeguards, risk amplifying existing health inequities. Excessive complexity in explanations may disproportionately affect patients with lower health literacy, while biased empathy responses could undermine trust among vulnerable groups. At the same time, improving LLMs' ability to deliver accessible, empathetic, and fair medical communication has the potential to broaden healthcare access and support clinicians in patient-centered care. Ensuring that such systems are transparent, bias-aware, and ethically evaluated is therefore critical to their responsible integration into healthcare.</p>
+            <p><strong>Important Note:</strong> This study evaluates LLM-generated synthetic diagnostic communications as an exploratory framework for investigating potential biases. It does not endorse the use of LLMs in actual clinical settings. All scenarios are synthetic; no real patient information is used.</p>
         </div>
     </section>
     <section id="bibtex" class="content-section">
