@@ -1,5 +1,9 @@
 # The Biased Oracle: Assessing LLMs' Understandability and Empathy in Medical Diagnoses
+
 <p align="center">
+  <a href="https://jeffateth.github.io/Biased_Oracle/">
+    <img src="https://img.shields.io/badge/Website-Project%20Page-orange?style=for-the-badge" alt="Project Website">
+  </a>
   <a href="https://arxiv.org/abs/2511.00924">
     <img src="https://img.shields.io/badge/arXiv-2511.00924-b31b1b.svg?style=for-the-badge" alt="arXiv">
   </a>
